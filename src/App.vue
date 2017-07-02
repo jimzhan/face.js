@@ -10,9 +10,6 @@
 
 <script>
 export default {
-  name: 'app',
-  mounted() {
-  },
 };
 </script>
 

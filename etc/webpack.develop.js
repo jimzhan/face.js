@@ -14,6 +14,7 @@ module.exports = merge(config, {
     inline: true,
     port: 3000,
     open: true,
+    openPage: '',   // fix for `undefined` page.
     contentBase: resolve(root, 'dist'),
     publicPath: '/',
   },

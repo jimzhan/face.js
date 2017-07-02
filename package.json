@@ -1,6 +1,6 @@
 {
   "name": "face.js",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Production application boilerplate for Vue.js + Foundation",
   "main": "src/index.js",
   "repository": "https://github.com/jimzhan/face.js",

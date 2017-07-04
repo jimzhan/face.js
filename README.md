@@ -13,6 +13,7 @@ Production application boilerplate for Vue, batteries included:
 + [Editorconfig](http://editorconfig.org/) Consistent coding styles formatter.
 + [Yarn](https://yarnpkg.com/en/) Dependency management.
 + [Vue.js](https://github.com/vuejs/vue) Progressive frontend framework.
++ [Vue Unique ID](https://github.com/termosa/vue-uniq-ids) Vue.js plugin that helps to use id-related attributes with no side-effect.
 + NPM scripts for common operations.
 
 ## Key NPM Scripts
@@ -26,5 +27,6 @@ TODOs
 - [x] webpack/webpack-dev-server support.
 - [x] NPM scripts for common operations.
 - [x] multiple webpack settings profiles.
-- [x] unit test integration
-- [ ] e2e test integration
+- [x] dynamic/unique ID integration.
+- [x] unit test integration.
+- [ ] e2e test integration.

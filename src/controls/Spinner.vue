@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-uni-id="'controls-spinner'">
     <template v-if="type === 'sk-rotating-plane'">
       <div class="sk-rotating-plane"></div>  
     </template>

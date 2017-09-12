@@ -1,0 +1,156 @@
+{
+  "name": "face.js",
+  "version": "0.1.0",
+  "description": "Node application boilerplate foundation built upon Babel",
+  "main": "src/index.js",
+  "scripts": {
+    "patch": "npm version patch",
+    "postpatch": "npm run push",
+    "minor": "npm version minor",
+    "postminor": "npm run push",
+    "push": "git push && git push --tags && npm publish",
+    "test": "BABEL_ENV=testing test --coverage",
+    "test:watch": "npm test -- --watch --watchExtensions js,jsx",
+    "start": "webpack-dev-server --config etc/webpack.develop.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimzhan/face.js.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript",
+    "babel",
+    "standardjs",
+    "eslint",
+    "foundation",
+    "boilerplate",
+    "react",
+    "mobx"
+  ],
+  "author": "Jim Zhan <jim.zhan@me.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jimzhan/face.js/issues"
+  },
+  "homepage": "https://github.com/jimzhan/face.js#readme",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "stage-2",
+      "jest"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-decorators-legacy",
+      "transform-decorators",
+      "transform-runtime",
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ],
+          "alias": {
+            "test": "./test"
+          }
+        }
+      ]
+    ],
+    "comments": false,
+    "env": {
+      "test": {
+        "presets": [
+          "env",
+          "stage-2"
+        ],
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "jest/globals": true
+    },
+    "extends": "standard",
+    "plugins": [
+      "import",
+      "jest"
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    },
+    "rules": {
+      "space-before-function-paren": 0
+    }
+  },
+  "jest": {
+    "rootDir": ".",
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "globals": {
+      "__DEV__": true
+    },
+    "setupTestFrameworkScriptFile": "./test/bootstrap.js",
+    "testRegex": "./jest/.*.spec.jsx?$"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.0.5",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-jest": "^21.0.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.0.2",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

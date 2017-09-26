@@ -1,6 +1,6 @@
 {
   "name": "face.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node application boilerplate foundation built upon Babel",
   "main": "src/index.js",
   "scripts": {

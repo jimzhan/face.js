@@ -41,6 +41,14 @@ module.exports = (profile = {}) => {
               'transform-decorators-legacy'
             ]
           }
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader!postcss-loader'
+        },
+        {
+          test: /\.less$/,
+          loader: 'style-loader!css-loader!less-loader'
         }
       ]
     },

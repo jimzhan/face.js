@@ -11,7 +11,8 @@
     "push": "git push && git push --tags && npm publish",
     "test": "BABEL_ENV=testing test --coverage",
     "test:watch": "npm test -- --watch --watchExtensions js,jsx",
-    "start": "webpack-dev-server --config etc/webpack.develop.js"
+    "start": "webpack-dev-server --config etc/webpack.develop.js",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -138,7 +139,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "standard-version": "^4.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
